@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Ridibatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ria';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ChangwonDangamRounded';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/ChangwonDangamRound-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BinggreIi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+html, body {min-height: 100%;
+    overflow-y: auto;}
+
+body {background-color: white;font-family: 'Ridibatang';}
+
+.main-page {display: block;}
+.main-page.hidden {display: none;}
+
+/* 스토리 페이지는 기본적으로 숨김 */
+.story-page {display: none;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    color: black;
+    line-height: 1.8;
+    font-family: 'Ridibatang';}
+
+.story-page .story-content {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    word-break: keep-all;
+}
+
+.story-page img {margin: 40px auto;}
+
+/* active 클래스가 있을 때만 보이게 */
+.story-page.active {
+    display: block !important;
+}
+
+/* 나머지 스타일... (생략) */
+
+.story-text {margin-bottom: 30px;
+    font-size: 0.9em;
+    font-family: 'Ridibatang';}
+
+.guide-text { color: darkgreen; font-size: 1.3em; margin-bottom: 30px; font-family: 'BinggreIi'; }
+
+.talk-text-adult {font-size: 1em;
+    font-family: 'ChangwonDangamRounded';
+    color: rgb(145, 41, 41);
+    margin-bottom: 30px;
+    font-style: italic;}
+
+.talk-text-child {font-size: 1em;
+    font-family: 'ChangwonDangamRounded';
+    color: rgb(51, 118, 49);
+    margin-bottom: 30px;
+    font-style: italic;}
+
+span {background: rgb(255, 233, 204); color: black;}
+
+.black-box-text {background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    border-radius: 4px;}
+
+.image-small {width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    display: block;}
+
+.image-tiny {width: 100px;
+        max-width: 100px;
+        margin: 0px auto;
+        display: block;}
+
+.hints-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.hint-button {background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;}
+
+.hint-button:hover {
+    background-color: #333;
+}
+
+.hint-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.answer-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.answer-input {
+    padding: 8px 12px;
+    font-size: 0.95em;
+    border: 2px solid #333;
+    border-radius: 4px;
+    width: 200px;
+    max-width: 100%;
+    flex: 1;
+    min-width: 150px;
+}
+
+.answer-submit {
+    padding: 8px 16px;
+    font-size: 0.95em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.answer-submit:hover {
+    background-color: #000;
+}
+
+.wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+.bg-header {
+    background: url(header.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-header-story {background: url(1-1.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    width: 100%;}
+
+.bg-header-story-2 {background: url(2-1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    width: 100%;}
+
+.bg-header-story-3 {background: url(3-1.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    width: 100%;}
+
+header {
+    padding: 80px 0px;
+}
+
+header h1 {
+    color: white;
+    font-size: 3em;
+    font-family: 'Ria';
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/*... (나머지 CSS 생략) ...*/
+
+.sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.section-button {
+    width: 100%;
+    max-width: 900px;
+    height: 150px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Ridibatang';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.section-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.section-button-1 {
+    background-image: url('1-1.png') !important;
+    background-color: transparent !important;
+}
+
+.section-button-2 {
+    background-image: url('2-1.png') !important;
+    background-color: transparent !important;
+}
+
+.section-button-3 {
+    background-image: url('3-1.png') !important;
+    background-color: transparent !important;
+}
+
+.section-button-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    header {
+        padding: 40px 0px;
+    }
+    
+    .wrap {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
